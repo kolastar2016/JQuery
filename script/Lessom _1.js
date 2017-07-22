@@ -18,7 +18,7 @@ $(function(){
   $("#tab td").eq(4).html('100');
   $('#tab td').eq(4).toggle();
   $('#tab').click(function(){
-    $('#tab td').eq(4).toggle()
+  $('#tab td').eq(4).toggle()
   })
   var x=$("#tab td:last").html();
   console.log(x);
