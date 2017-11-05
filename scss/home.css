@@ -1,3 +1,28 @@
 .lessonOne {
-	background-color: grey;
+	padding: 0rem;
+	margin: 0rem;
+	background: white;
+} 
+
+.lessonTwo {
+	padding: 0rem;
+	margin: 0rem;
+	margin-top: 5rem;
+	background: white;	
+}
+
+.showhide {
+	margin-top: 2rem;
+}
+
+.fadeInToOut {
+	margin-top: 2rem;	
+}
+
+.slide {
+	margin-top: 2rem;	
+}
+
+.anim1 {
+	margin-top: 2rem;
 }
