@@ -11,14 +11,6 @@ $(function(){
 })
 
 $(function(){
-  $('.pTwo:eq(0)').html('CHANGE<B><I>  ABSAZ</I></B>');
-  var s=$('.pTwo:last').html();
-  $('.pTwo:last').html(s+'paragraf_new');
-
-alert($('.pTwo:first').html()+'\n'+$('.pTwo:first').text());
-})
-
-$(function(){
   $('#greenDivShow SPAN:eq(0)').on('click',function(){
     $(this).hide();
     $('#greenDivShow SPAN:eq(1)').delay(1000).show(1000);

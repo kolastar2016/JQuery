@@ -1,8 +1,8 @@
-/*
+
 $(function(){
-  $('#inp1').val('56');
-  $('#inp1').on('input',function(){
-  $('#inp1').next().html($('#inp1').val());
+  $('#inputText').val('56');
+  $('#inputText').on('input',function(){
+  $('#inputText').next().html($('#inputText').val());
   })
   $('input:eq(1)').val('BATTON');
 })
@@ -14,45 +14,37 @@ $(function(){
       if (s==='0'){
         $(this).val('1');
       }
-        else{
-          $(this).val('0');
-        }
+      else {
+         $(this).val('0');
+      }
     $(this).parent().children().last().html($(this).val());
   })
 })
 
 $(function(){
-  $(document.body).append('<p id="p1">Hello !!!</p>');
-  //$('b:eq(0)').append('<p id="p1">Hello !!!</p>');
-  $('b:first').append('<p id="p1">Hello !!!</p>');
-  $('p').appendTo('#dv1');
-  $('<p>Bye</p>').appendTo('#dv1');
+  $('#divClone').prepend('<img src = "" width="100%">');
+  $('<span class = "cl1">i</span>').prependTo('#tableColorTest td');
+  $('<tr><td></td><td></td><td></td></tr>').prependTo('#tableColorTest');
+  $('#tableColorTest tr:eq(3) td').css('backgroundColor','red');
+  $('#tableColorTest tr:first td').css('backgroundColor','green');
+  $('#tableColorTest tr:eq(2) td').css('backgroundColor','yellow');
+  $('#tableColorTest tr:last').prependTo('#tableColorTest');
 })
 
 $(function(){
-  $('#dv1').prepend('<img src = "" width="100%">');
-  $('<span class = "cl1">i</span>').prependTo('#tab1 td');
-  $('<tr><td></td><td></td><td></td></tr>').prependTo('#tab1');
-  $('#tab1 tr:eq(3) td').css('backgroundColor','red');
-  $('#tab1 tr:first td').css('backgroundColor','green');
-  $('#tab1 tr:eq(2) td').css('backgroundColor','yellow');
-  $('#tab1 tr:last').prependTo('#tab1');
-})
-
-$(function(){
-  $('#tab1 tr').each(function(i,elem){
+  $('#tableColorTest tr').each(function(i,elem){
     $(elem).children().last().after('<td class="rez">'+i+'</td>');
     $(this).children().last().css('borderColor','red');
     $(elem).children().last().css('borderStyle','dotted');
-    console.log($('#tab1 tr').index(this));
+    console.log($('#tableColorTest tr').index(this));
   });
 })
 
 $(function(){
-  var clon1 = $('#tab1').clone();
-  $(clon1).attr('id','tab2');
-  $('#dv1').before(clon1);
-  $($('#tab1').clone()).attr('id','tab3').insertBefore('#tab2');
+  var clon1 = $('#tableColorTest').clone();
+  $(clon1).attr('id','tableCloneTest');
+  $('#divClone').before(clon1);
+  $($('#tableColorTest').clone()).attr('id','tableCloneTestNext').insertBefore('#tableCloneTest');
 })
 
 $(function(){
@@ -62,7 +54,6 @@ $(function(){
   };
   $.fn.middle = function(){
     var n=this.length;
-    //$(this).each(function())
     
 	var srn=Math.floor(n/2);
 	console.log(srn);
@@ -99,9 +90,8 @@ $(function(){
 });
 
 $(function(){
-  $('#tab2').hello().css('borderWidth','10px').hello();
-  $('#tab2 td').middle().css('backgroundColor','blue');
+  $('#tableCloneTest').hello().css('borderWidth','10px').hello();
+  $('#tableCloneTest td').middle().css('backgroundColor','blue');
   $('ol li').middle().css('color','red');
   $('*:liv').animate({'fontSize':'40pt'},5000);
 });
-*/
